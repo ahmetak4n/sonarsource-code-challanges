@@ -1,6 +1,6 @@
 # Day 4 Javascript
-We have a small javascript application that developed by nodejs - expressjs framework.
-
+We have a small javascript application that developed by expressjs framework. ExpressJS routing provide case-insensitive routing by default.
+But our team developed a middleware for validation of JWT tokens with `startsWith` function that are working case-sensitive by default.
 
 # run
 ```bash
