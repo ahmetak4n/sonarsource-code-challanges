@@ -1,8 +1,8 @@
-# Day 4 Javascript
+# day 4 javascript
 We have a small javascript application that developed by expressjs framework. ExpressJS routing provide case-insensitive routing by default.
 But our team developed a middleware for validation of JWT tokens with `startsWith` function that are working case-sensitive by default.
 
-# run
+# build & run
 ```bash
 git clone https://github.com/ahmetak4n/sonarsource-code-challanges.git
 cd sonarsource-code-challanges/day4
