@@ -2,7 +2,7 @@
 We have a small javascript application that developed by expressjs framework. ExpressJS routing provide case-insensitive routing by default.
 But our team developed a middleware for validation of JWT tokens with `startsWith` function that are working case-sensitive by default.
 
-# build & run
+## build and run from source
 ```bash
 git clone https://github.com/ahmetak4n/sonarsource-code-challanges.git
 cd sonarsource-code-challanges/day4
@@ -10,7 +10,15 @@ npm install
 node app.js
 ```
 
-# verify the vulnerability
+## build and run with docker
+```bash
+git clone https://github.com/ahmetak4n/sonarsource-code-challanges.git
+cd sonarsource-code-challanges/day4
+docker build -t sscc-day4 .
+docker run -p 1337:1337 sscc-day4:latest
+```
+
+## verify the vulnerability
 You can't access `/api/admin` path because we don't have any valid JWT token
 ``` bash
 curl  -X $'GET' \
